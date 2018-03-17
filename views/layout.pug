@@ -1,0 +1,34 @@
+doctype html
+html(lang='fr')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/assets/css/main.css')
+  body        
+    section#sidebar
+      div(class="inner")
+        nav
+          ul
+            li
+              a(href="#intro") Welcome
+            li
+              a(href="#one") Who we are
+            li
+              a(href="#two") What we do
+            li
+              a(href="#three") Get in touch           
+      
+    
+    block content
+    footer#footer(class='wrapper style1-alt')
+      ul.copyright
+        li &copy; Untitled. All rights reserved.
+        li Design:
+          a(href="http://html5up.net") HTML5 UP
+    script(src='assets/js/jquery.min.js')
+    script(src='assets/js/jquery.scrollex.min.js')
+    script(src='assets/js/jquery.scrolly.min.js')
+    script(src='assets/js/skel.min.js')
+    script(src='assets/js/util.js')
+    script(src='assets/js/main.js')
