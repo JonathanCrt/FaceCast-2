@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  
+      
+  div#wrapper
+    section#intro(class="wrapper style1 fullscreen fade-up")
+      div(class="inner")
+        h1 Add offer
+        form(action="../offre/ajoutOffre", method="post")
+                            div.row
+                                div(class='6u 12u$(mobile)')
+                                    input(type='text', id='fname', name='nameEvenement', placeholder='Name Evenement')
+                                    br
+                                div(class='6u 12u$(mobile)')
+                                    input(type='text', id='ftype', name='type', placeholder='Type')
+                                    br
+
+                            div.row
+                                div(class='6u 12u$(mobile)')
+                                    input(type='text', id='fdate', name='dateBegin', placeholder='Start date')
+                                    br
+                                div(class='6u 12u$(mobile)')
+                                    input(type='text', id='fnumberDay', name='numberDay', placeholder='Number of day')
+                                    br
+                            div.row
+                                div(class='6u 12u$(mobile)')
+                                    input(type='text', id='fnumberExtra', name='numberExtra', placeholder='Number of extra')
+                                    br
+                                div(class='6u 12u$(mobile)')
+                                    input(type='text', id='frole', name='role', placeholder='Role')
+                                    br
+                                div(class='12u$')                
+                                    input(type='submit', id='btnSend' class="button special" value="Send")
+                    

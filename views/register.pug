@@ -1,0 +1,35 @@
+extends layout
+
+block content
+    section#sidebar
+        div(class="inner")
+            if user
+                nav
+                    ul
+                        li
+                            a(href="/") Home
+                        li
+                            a(href="/offre") List of offers
+                        li
+                            a(href="/extra") List of extras
+                        li
+                            a(href="/candidacy") List of candidacy
+    div#wrapper
+        section#intro(class="wrapper style1 fullscreen fade-up")
+            div(class="inner")      
+                h2.alt Sign up 
+                    
+                    form(action="/register", method="post")
+                        div.row      
+                            div(class='6u 12u$(mobile)') 
+                                br      
+                                input(type='text', name="username", placeholder='Login')     
+                                br      
+                            div(class='12u$')              
+                                input(type='password', name="password", placeholder='Password')   
+                                br        
+                                input(type='password', name="verify", placeholder='Password verification')      
+                                br     
+                            div(class='12u$')          
+                                input(type='submit' class="button special" value="Validate")
+

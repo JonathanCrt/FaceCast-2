@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  
+      
+  div#wrapper
+    section#intro(class="wrapper style1 fullscreen fade-up")
+      div(class="inner")
+        h1 List of candidacy
+        table
+          tr
+            th State
+            th Last name of extra
+            th First name of extra
+            th Name of evenement
+            th Role
+            th Update
+            th Delete
+          each candidacyTab, i in Candidacy
+            td
+              =candidacyTab.etat
+            td
+              each extra in candidacyTab.extra
+                =extra.last_name
+            td
+              each extra in candidacyTab.extra
+                =extra.first_name
+            td
+              each offer in candidacyTab.offer
+                =offer.nameEvenement
+            td
+              each offer in candidacyTab.offer
+                =offer.role
+            td
+              a(href='../candidacy/formUpdate/'+candidacyTab._id+'/'+candidacyTab.etat)
+                li(class="fa fa-edit")
+            td
+              a(href='../candidacy/delete/'+candidacyTab.id)
+                li(class="fa fa-trash")
+            tr      
+      
+
+

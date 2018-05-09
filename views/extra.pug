@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  
+      
+  div#wrapper
+    section#intro(class="wrapper style1 fullscreen fade-up")
+      div(class="inner")
+        h1 List of extras
+        table
+          tr
+            th Last name
+            th First name
+            th Email
+        
+          each extraTab, i in Extra
+            td
+              =extraTab.last_name
+            td
+              =extraTab.first_name
+            td
+              =extraTab.email
+            tr      
+        
+
+

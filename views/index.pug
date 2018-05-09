@@ -1,57 +1,56 @@
 extends layout
-
-block content
   
+block content
+  section#sidebar
+      div(class="inner")
+        if user
+          nav
+            ul
+              li
+                a(href="/") Home
+              li
+                a(href="/offre") List of offers
+              li
+                a(href="/extra") List of extras
+              li
+                a(href="/candidacy") List of candidacy
       
   div#wrapper
     section#intro(class="wrapper style1 fullscreen fade-up")
       div(class="inner")
-        h1 HYPERSPACE
-        p Just another fine responsive site template designed by  Creative Commons
-
-
-
-    section#one(class="wrapper style2 spotlights")
-      div(class="inner")
-        h1 HYPERSPACE
-        p Just another fine responsive site template designed by  Creative Commons
-        br
-
-
-    section#two(class="wrapper style3 fade-up")
-      div(class="inner")
-        h1 HYPERSPACE
-        p Just another fine responsive site template designed by  Creative Commons
-
-    section#three(class="wrapper style1 fade-up")
-      div(class="inner")
-        h1 HYPERSPACE
-        p Just another fine responsive site template designed by  Creative Commons
-				
-				
-				
-				
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+        h1 FACECAST
+        p Original website on Node.js
       
+      
+      div(class="inner")
+        if !user
+          a(href='/login', class='button special') Login         
+          br            
+          br            
+          a(href='/register', class='button special') Register          
+        if user            
+          p You are connected under #{user.username}            
+          a(href='/logout', class='button special') Logout
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

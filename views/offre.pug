@@ -1,0 +1,41 @@
+extends layout
+
+block content
+  
+      
+  div#wrapper
+    section#intro(class="wrapper style1 fullscreen fade-up")
+      div(class="inner")
+        h1 List of offers
+        table
+          tr
+            th Name of evenement
+            th Type
+            th Start date
+            th Number of day
+            th Role
+            th Number of extras
+            th Delete
+
+        
+          each offerTab, i in Offre
+            td
+              =offerTab.nameEvenement
+            td
+              =offerTab.type
+            td
+              =offerTab.dateBegin
+            td
+              =offerTab.numberDay
+            td
+              =offerTab.role
+            td
+              =offerTab.numberExtra
+            td
+              a(href='../offre/delete/'+offerTab.id)
+                li(class="fa fa-trash")
+            tr      
+        a(href='/offre/formAjoutOffre')
+          li(class="fa fa-plus",class='button special')  Add new offer
+
+

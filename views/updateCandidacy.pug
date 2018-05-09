@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  
+      
+  div#wrapper
+    section#intro(class="wrapper style1 fullscreen fade-up")
+      div(class="inner")
+        h1 Mise a jour d'une candidature 
+        form(action="../../update", method="get")
+                            div.row
+                                div(class='6u 12u$(mobile)')
+                                    input(type='hidden', id='fname', name='id',  value=id)
+                                    select(name="etat") 
+                                      option(value=etat selected="true" disabled="disabled")
+                                        =etat+':etat actuelle de la candidature'
+                                      option(value="EnAttente")
+                                        ="EnAttente"
+                                      option(value="Retenue")
+                                        ="Retenue"
+                                      option(value="Accepter")
+                                        ="Accepter"
+                                      option(value="Refuser")
+                                        ="Refuser"
+                                      option(value="Terminer")
+                                        ="Terminer"
+                                
+                                                              
+                                div(class='12u$')                
+                                    input(type='submit', id='btnSend')
